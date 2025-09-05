@@ -1,0 +1,43 @@
+
+<!-- Presentation Tier (Frontend):
+
+    Amazon S3 - To host static web assets (HTML, CSS, JS)
+    Amazon CloudFront - CDN for global content distribution
+    Amazon Route 53 - DNS management and routing
+
+Application Tier (Backend):
+
+    Amazon API Gateway - RESTful/WebSocket API management
+    AWS Lambda - Serverless compute for business logic
+    Amazon Cognito - User authentication and authorization
+    AWS Step Functions - For complex workflow orchestration
+
+Data Tier:
+
+    Amazon DynamoDB - Serverless NoSQL database
+    Amazon S3 - Object storage for files/media
+    Amazon Aurora Serverless - For relational database needs
+
+Additional Supporting Services:
+
+    AWS CloudFormation/SAM - Infrastructure as Code
+    AWS X-Ray - Distributed tracing
+    Amazon CloudWatch - Monitoring and logging
+    AWS Systems Manager Parameter Store - Configuration management
+    Amazon EventBridge - For event-driven architectures
+
+A typical request flow would be:
+
+    User accesses website hosted on S3/CloudFront
+    Frontend makes API calls to API Gateway
+    API Gateway triggers Lambda functions
+    Lambda functions interact with databases and return responses
+    CloudWatch monitors the entire stack
+
+This architecture provides:
+
+    Auto-scaling
+    Pay-per-use pricing
+    High availability
+    No server management required
+    Built-in security features -->

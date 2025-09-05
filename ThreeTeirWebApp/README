@@ -1,0 +1,20 @@
+#Multiteir webapp consists of:
+    #network
+        #VPC: A custom Virtual Private Cloud to isolate your infrastructure.
+        #Subnets: Public subnets for internet-facing resources (e.g., Load Balancer, Web Tier) and private subnets for internal resources (e.g., Application Tier, Database Tier).
+        #Route Tables: Define how traffic is routed within the VPC and to the internet.
+        #Internet Gateway (IGW): Enables internet connectivity for public subnets.
+        #NAT Gateway: Allows instances in private subnets to initiate outbound internet connections while remaining isolated from inbound public traffic.
+    
+    #data
+        #Amazon RDS: A managed relational database service (e.g., MySQL, PostgreSQL) for storing application data.
+        #Security Groups: Restrict access to the database only from authorized application servers.
+        
+    #presentation
+        #Application Load Balancer (ALB): Distributes incoming web traffic across multiple web servers for high availability and scalability.
+        #EC2 Auto Scaling Group (ASG): Manages the lifecycle of web server instances, automatically scaling them up or down based on demand.
+        #Security Groups: Control inbound and outbound traffic to the web servers.
+    
+    #applicationtier
+        #EC2 Auto Scaling Group (ASG): Manages application server instances, running the business logic and interacting with the database.
+        #Security Groups: Control traffic between the application servers and other tiers (e.g., web tier, database tier).
