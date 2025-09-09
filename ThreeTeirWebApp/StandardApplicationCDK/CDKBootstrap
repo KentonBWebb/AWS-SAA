@@ -1,0 +1,15 @@
+
+
+#mkdir redshift-cdk && cd redshift-cdk
+
+#cdk init app --language python
+
+#source .venv/Scripts/Activate.ps1 
+#.venv\Scripts\Activate.ps1
+#pip install aws-cdk-lib constructs
+
+#cdk bootstrap aws://877086053095/us-east-1
+
+#cdk synth
+#cdk bootstrap aws://877086053095/us-east-1
+#cdk deploy
